@@ -2,3 +2,7 @@
 .mjx-chtml.MathJax_CHTML {
   font-size: 100% !important;
 }
+
+.reveal h1 {
+  font-size: 3.27em !important;
+}
