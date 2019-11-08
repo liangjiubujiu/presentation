@@ -1,0 +1,73 @@
+#+OPTIONS: num:nil toc:nil ^:nil
+#+REVEAL_TRANS: convex
+# +REVEAL_TRANS: None/Fade/Slide/Convex/Concave/Zoom
+#+REVEAL_THEME: black
+# +REVEAL_THEME:
+# Black/White/League/Sky/Beige/Simple/Serif/Blood/Night/Moon/Solarized
+#+REVEAL_TITLE_SLIDE: <h1>%t</h1> <p>%a</p>
+#+REVEAL_MATHJAX_URL: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML
+# #+REVEAL_PLUGINS: (markdown highlight notes zoom-js)
+#+REVEAL_EXTRA_CSS: ./style.css
+# ####
+#+REVEAL_MULTIPLEX_ID: 5fd4798b7b99595e
+#+REVEAL_MULTIPLEX_SECRET: 15728159987567729117
+#+REVEAL_MULTIPLEX_URL: https://reveal-js-multiplex-ccjbegmaii.now.sh
+# #+REVEAL_MULTIPLEX_SOCKETIO_URL: http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js
+#+REVEAL_MULTIPLEX_SOCKETIO_URL: https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js
+#+REVEAL_PLUGINS: (markdown highlight notes zoom-js multiplex)
+
+#+Title: Github & Pycharm Workflow
+#+Author: Weiwei CUi
+#+EMAIL: w.cui@qmul.ac.uk
+
+* Guidance
+** Git
+*** @@html:@@
+    It is easiest to install Git on Linux using the preferred package manager of your Linux distribution. If you prefer to build from source, you can find the tarballs on kernel.org.
+    Debian/Ubuntu
+    #+BEGIN_SRC shell
+        #For the latest stable version for your release of Debian/Ubuntu
+        apt-get install git
+
+        #For Ubuntu, this PPA provides the latest stable upstream Git version
+        add-apt-repository ppa:git-core/ppa
+        sudo apt update
+        sudo apt install git
+
+** Github
+*** Create a new repository
+   + https://github.com/liangjiubujiu/demopygit
+
+** Pycharm
+*** Install the latest version on ubuntu
+    Download Pycharm package
+     #+BEGIN_SRC shell
+        cd Downloads/pycharm-2018.1.4/bin
+        Tools-Create Desktop Entry...
+        sh ./pycharm.sh
+*** Check out a project from a remote host (clone)
+    1. From the main menu, choose VCS | Checkout from Version Control | Git, or, if no project is currently opened, choose Checkout from Version Control | Git on the Welcome screen.
+    2. In the Clone Repository dialog, specify the URL of the remote repository you want to clone (you can click Test to make sure that connection to the remote can be established).
+    3. In the Directory field, specify the path where the folder for your local Git repository will be created into which the remote repository will be cloned.
+    4. Click Clone. If you want to create a PyCharm project based on the sources you have cloned, click Yes in the confirmation dialog. Git root mapping will be automatically set to the project root directory.
+
+*** Modify and save files
+    1. Revise codes cloned from a github account in Pycharm
+    2. Save project by
+        Right Click-> Git-> Commit Directory
+        Right Click-> Git-> Repository->Push
+    3. View the changes on your github account
+
+***Share a new repository
+    1. VCS-> Import into version control-> Share Project on Github
+
+*** @@html:@@
+    :PROPERTIES:
+    :reveal_background: ./images/ZGL.gif
+    :reveal_background_trans: slide
+    :reveal_background_size: 50%
+    :END:
+
+* Exercise
+  https://github.com/liangjiubujiu/demopygit
+* Thank you!

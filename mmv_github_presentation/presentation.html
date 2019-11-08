@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>GitHub Workflow</title>
+<meta name="author" content="(Edgar Giussepi Lopez Molina)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.rawgit.com/hakimel/reveal.js/3.8.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.rawgit.com/hakimel/reveal.js/3.8.0/css/theme/black.css" id="theme"/>
+
+<link rel="stylesheet" href="./style.css"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/hakimel/reveal.js/3.8.0/lib/css/zenburn.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.rawgit.com/hakimel/reveal.js/3.8.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1>GitHub Workflow</h1> <p>Edgar Giussepi Lopez Molina</p>
+</section>
+
+<section>
+<section id="slide-org34efa3c">
+<h2 id="org34efa3c">Introduction</h2>
+<div class="outline-text-2" id="text-org34efa3c">
+</div>
+</section>
+<section id="slide-org661174a">
+<h3 id="org661174a">Git</h3>
+<div class="outline-text-3" id="text-org661174a">
+</div>
+</section>
+<section id="slide-orgd706948">
+<h4 id="orgd706948"></h4>
+<p>
+Git is a distributed version-control system for tracking changes
+in source code during software development. It is designed for
+coordinating work among programmers, but it can be used to track changes in
+any set of files
+</p>
+
+</section>
+<section id="slide-org2a90243">
+<h3 id="org2a90243">GitHub</h3>
+<div class="outline-text-3" id="text-org2a90243">
+</div>
+</section>
+<section id="slide-org63e3481">
+<h4 id="org63e3481"></h4>
+<p>
+GitHub is an American company that provides hosting for software development
+version control using Git
+</p>
+
+</section>
+<section id="slide-orgd9e8545">
+<h4 id="orgd9e8545">Services</h4>
+<ul>
+<li>GitHub</li>
+<li>GitHub Enterprise</li>
+<li>GitHub Pages</li>
+<li>Gist</li>
+<li>Education Program</li>
+<li>GitHub Marketplace service</li>
+<li>GitHub Community Forum</li>
+<li>GitHub Sponsors</li>
+
+</ul>
+
+</section>
+<section id="slide-org29ae965">
+<h3 id="org29ae965">GitHub Education</h3>
+<div class="outline-text-3" id="text-org29ae965">
+</div>
+</section>
+<section id="slide-org41d1a13">
+<h4 id="org41d1a13"></h4>
+<p>
+GitHub Education helps students, teachers, and schools access the tools and
+events they need to shape the next generation of software development.
+</p>
+
+</section>
+<section id="slide-org70affdb">
+<h4 id="org70affdb">Links</h4>
+<ul>
+<li><a href="https://education.github.com/">https://education.github.com/</a></li>
+<li><a href="https://education.github.com/benefits">https://education.github.com/benefits</a></li>
+<li><a href="https://education.github.com/teachers">https://education.github.com/teachers</a></li>
+<li><a href="https://help.github.com/en/github/teaching-and-learning-with-github">https://help.github.com/en/github/teaching-and-learning-with-github</a>-</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org617b327">
+<h2 id="org617b327">Usage (Cheat sheet)</h2>
+<div class="outline-text-2" id="text-org617b327">
+</div>
+</section>
+<section id="slide-org7c16878">
+<h3 id="org7c16878"></h3>
+<ul>
+<li><p>
+Create a .gitignore file, e.g.:
+</p>
+<div class="org-src-container">
+
+<pre><code class="shell" ># DATASET and WEIGHTS
+COCO
+weights
+
+# emacs files
+*~
+
+# pickle files generated
+data/pickle_files
+
+# tensorboard logs
+tensorboard_logs
+
+# model checkpoints
+checkpoints
+checkpoints_sample
+
+# shell logs
+shell_logs
+
+# virtualenv
+env
+
+# configuration file
+settings.py
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# input and output folders
+input
+output
+</code></pre>
+</div></li>
+
+</ul>
+</section>
+<section id="slide-orga12aa69">
+<h3 id="orga12aa69"></h3>
+<ul>
+<li><p>
+Create / initialise a new repository
+</p>
+<div class="org-src-container">
+
+<pre><code class="shell" >git init
+git add .
+git commit -m "first commit"
+git remote add origin git@github.com:&lt;username&gt;/&lt;myrepository&gt;.git
+git push -u origin master
+</code></pre>
+</div></li>
+
+</ul>
+</section>
+<section id="slide-org51343b7">
+<h3 id="org51343b7"></h3>
+<ul>
+<li><p>
+Commit changes
+</p>
+<div class="org-src-container">
+
+<pre><code class="shell" >git add file1 file 2
+git commit -am "module-&gt;class:: new preprocessing method"
+</code></pre>
+</div></li>
+
+<li><p>
+Push changes to GitHub repository
+</p>
+<div class="org-src-container">
+
+<pre><code class="shell" >git push
+</code></pre>
+</div></li>
+
+</ul>
+
+</section>
+<section id="slide-org7b217c0">
+<h3 id="org7b217c0"></h3>
+<ul>
+<li><p>
+Amend name from last commit
+</p>
+<div class="org-src-container">
+
+<pre><code class="shell" >git commit --amend -m "&lt;new commit message&gt;"
+</code></pre>
+</div></li>
+
+<li><p>
+Undo last commit
+</p>
+<div class="org-src-container">
+
+<pre><code class="shell" >git reset HEAD~
+</code></pre>
+</div></li>
+
+</ul>
+</section>
+<section id="slide-orge577e43">
+<h3 id="orge577e43"></h3>
+<ul>
+<li><p>
+See branches
+</p>
+<div class="org-src-container">
+
+<pre><code class="shell" >git branch
+</code></pre>
+</div></li>
+
+<li><p>
+Create new branch
+</p>
+<div class="org-src-container">
+
+<pre><code class="shell" >git checkout -b &lt;new_branch_name&gt;
+</code></pre>
+</div></li>
+
+<li><p>
+Push new branch to GitHub repository
+</p>
+<div class="org-src-container">
+
+<pre><code class="shell" >git push origin mybranch
+</code></pre>
+</div></li>
+
+</ul>
+
+</section>
+<section id="slide-org88eb220">
+<h3 id="org88eb220"></h3>
+<ul>
+<li><p>
+Remove branch from GitHub repository (generally after merging a Pull Request or
+discarding the changes from a branch)
+</p>
+<div class="org-src-container">
+
+<pre><code class="shell" >git push origin :mybranch
+</code></pre>
+</div></li>
+
+<li><p>
+Remove branch from local repository (generally after merging a Pull Request or
+discarding the changes from a branch)
+</p>
+<div class="org-src-container">
+
+<pre><code class="shell" >git branch -d &lt;mybranch&gt;
+</code></pre>
+</div></li>
+
+</ul>
+
+</section>
+<section id="slide-org66fe826">
+<h3 id="org66fe826"></h3>
+<ul>
+<li><p>
+Pull changes from GitHub repository
+</p>
+<div class="org-src-container">
+
+<pre><code class="shell" >git pull --rebase origin mybranch
+</code></pre>
+</div></li>
+
+<li><p>
+Pick specific commit to merge (instead of the whole branch)
+</p>
+<div class="org-src-container">
+
+<pre><code class="shell" >git cherry-pick -x &lt;commit-sha&gt;
+</code></pre>
+</div></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf9c4c53">
+<h2 id="orgf9c4c53">GitHub Education Account</h2>
+<div class="outline-text-2" id="text-orgf9c4c53">
+</div>
+</section>
+<section id="slide-org135eb6b">
+<h3 id="org135eb6b">Qianni's Account</h3>
+<div class="outline-text-3" id="text-org135eb6b">
+</div>
+</section>
+<section id="slide-org0df0b9e">
+<h4 id="org0df0b9e"></h4>
+<p>
+<a href="https://github.com/QNZhang">https://github.com/QNZhang</a>
+</p>
+</section>
+<section id="slide-org6b18e18">
+<h3 id="org6b18e18">Content</h3>
+<div class="outline-text-3" id="text-org6b18e18">
+</div>
+</section>
+<section id="slide-org0893fe4">
+<h4 id="org0893fe4"></h4>
+<ul>
+<li>Repositories with working code and ready to be forked, cloned, duplicated
+or downloaded.</li>
+<li>Applications from challenges, DL/ML architectures developed, processing
+tools, applications from PhD stages; in a nutshell, any program that could be
+re-used or reviewed as a reference.</li>
+
+</ul>
+</section>
+<section id="slide-org5bf84a3">
+<h3 id="org5bf84a3">Rules</h3>
+<div class="outline-text-3" id="text-org5bf84a3">
+</div>
+</section>
+<section id="slide-orgc928c86">
+<h4 id="orgc928c86"></h4>
+<ul>
+<li>All of them will be private unless they are ready to be released.</li>
+<li>They must contain a README.md file with clear and concise instructions for:
+<ul>
+<li>Installation</li>
+<li>Usage</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org58fc963">
+<h4 id="org58fc963"></h4>
+<ul>
+<li>Long files must be handled through <a href="https://git-lfs.github.com/">git-lfs</a></li>
+<li>PhD students cloning a repository will work as collaborators.</li>
+<li>New features / modifications must be done on new branches with clear
+names describing the modification, e.g., classification-coco-dataset</li>
+
+</ul>
+</section>
+<section id="slide-org4f40e3e">
+<h4 id="org4f40e3e"></h4>
+<ul>
+<li>If changes must modify the original branch, then a pull request (PR) must be
+created.</li>
+<li>The manager of the account will review the PR.</li>
+
+</ul>
+</section>
+<section id="slide-org0569404" data-background="./images/pull_request_button.png" data-background-size="50%" data-background-transition="slide">
+<h4 id="org0569404"></h4>
+
+</section>
+<section id="slide-orgfe6a10b" data-background="./images/pull_request_form.png" data-background-size="50%" data-background-transition="slide">
+<h4 id="orgfe6a10b"></h4>
+
+</section>
+<section id="slide-orgc3f02d7">
+<h3 id="orgc3f02d7">Development advice</h3>
+<div class="outline-text-3" id="text-orgc3f02d7">
+</div>
+</section>
+<section id="slide-org02b3383">
+<h4 id="org02b3383"></h4>
+<ul>
+<li>Handle simple changes with normal commit operations.</li>
+<li>Complex or large modifications should be done on a separate branch.
+Thus, if something goes wrong it can be easily reverted.</li>
+<li>After merging a branch, remove the merged branch.</li>
+
+</ul>
+
+</section>
+<section id="slide-org0a38246">
+<h4 id="org0a38246"></h4>
+<ul>
+<li>Use meaningful names for commits and branches. So later, following the
+development and bug tracking will be natural and easier respectively.</li>
+<li>Do not comment code to have it as reference. Instead, just remove it because
+GitHub will already keep track of it.</li>
+
+</ul>
+
+</section>
+<section id="slide-org86c8b41">
+<h4 id="org86c8b41"></h4>
+<ul>
+<li>It is better to have several small commits than a huge commit with lots of
+changes. The latter will be very hard to follow.</li>
+<li>Use GitHub for any kind of project that can have several version or
+requires a incremental development. e.g., articles, thesis, big and small
+applications, CVs, among others.</li>
+
+</ul>
+
+</section>
+<section id="slide-org4305610">
+<h4 id="org4305610">When more than one person is working in the same project</h4>
+<ul>
+<li><p>
+After saving every single local commit update your local repository by running:
+</p>
+<div class="org-src-container">
+
+<pre><code class="shell" >git pull --rebase origin &lt;branch_name&gt;
+</code></pre>
+</div></li>
+<li>If there are conflicts, fix them properly and then push the changes to
+the repository to make sure your coworkers will have the most
+updated working version too.</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orge2c787d">
+<h2 id="orge2c787d">Exercise</h2>
+<p>
+<a href="https://github.com/giussepi/mmv_github_presentation_exercise">https://github.com/giussepi/mmv_github_presentation_exercise</a>
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgb539cff">
+<h2 id="orgb539cff">Thank you!</h2>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.rawgit.com/hakimel/reveal.js/3.8.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'convex', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '15728159987567729117', // null if client
+    id: '5fd4798b7b99595e', // id, obtained from socket.io server
+    url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+,
+ { src: 'https://cdn.rawgit.com/hakimel/reveal.js/3.8.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.rawgit.com/hakimel/reveal.js/3.8.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.rawgit.com/hakimel/reveal.js/3.8.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+ { src: 'https://cdn.rawgit.com/hakimel/reveal.js/3.8.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+,
+ { src: 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js', async: true },
+ { src: 'https://cdn.rawgit.com/hakimel/reveal.js/3.8.0/plugin/multiplex/master.js', async: true }]
+});
+</script>
+</body>
+</html>
